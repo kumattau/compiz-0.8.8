@@ -1,0 +1,14 @@
+diff --git a/src/notification/notification.c b/src/notification/notification.c
+index 7fbe4ac..6969ec1 100644
+--- a/src/notification/notification.c
++++ b/src/notification/notification.c
+@@ -19,6 +19,9 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  */
+ 
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif /* HAVE_CONFIG_H */
+ 
+ #include <libnotify/notify.h>
+ #include <stdio.h>
