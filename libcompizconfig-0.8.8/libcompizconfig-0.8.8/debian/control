@@ -2,7 +2,7 @@ Source: libcompizconfig
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Sean Finney <seanius@debian.org>
-Build-Depends: debhelper (>= 5), autoconf, automake1.9, autotools-dev, compiz-dev (>= 0.8.4-1), intltool, libtool, libglib2.0-dev, 
+Build-Depends: debhelper (>= 5), autoconf, automake1.9, autotools-dev, compiz-dev (>= 0.8.8-1), intltool, libtool, libglib2.0-dev, 
  libxml2-dev, libxslt1-dev,
 Standards-Version: 3.8.1
 Section: libs

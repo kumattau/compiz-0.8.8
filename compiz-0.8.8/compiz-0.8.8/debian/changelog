@@ -1,3 +1,9 @@
+compiz (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- kumattau <kumattau@gmail.com>  Sun, 16 Oct 2011 03:52:24 +0900
+
 compiz (0.8.4-4) unstable; urgency=low
 
   * Drop libdbus-qt-1-dev from Build-Depends, as kindly requested by

@@ -33,7 +33,9 @@ configure-stamp: $(QUILT_STAMPFN)
 	for f in $(UPSTREAM_PRESERVE); do \
 		cp -a $$f $$f.preserve; \
 	done
-	./autogen.sh
+	autoreconf -v --install
+	glib-gettextize --copy --force
+	intltoolize --automake --copy --force
 	./configure --prefix=/usr --disable-static
 	touch configure-stamp
 

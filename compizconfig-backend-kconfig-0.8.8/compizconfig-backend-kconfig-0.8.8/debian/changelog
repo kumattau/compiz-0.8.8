@@ -1,3 +1,9 @@
+compizconfig-backend-kconfig (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- kumattau <kumattau@gmail.com>  Sun, 16 Oct 2011 03:53:39 +0900
+
 compizconfig-backend-kconfig (0.8.4-2) unstable; urgency=low
 
   * Add lintian override for the private libraries with defined rpath

@@ -19,7 +19,10 @@ AUTOFOO_DELETE:=Makefile.in aclocal.m4 config.guess config.sub configure \
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	./autogen.sh --prefix=/usr --disable-static
+	autoreconf -v --install
+	glib-gettextize --copy --force
+	intltoolize --automake --copy --force
+	./configure --enable-maintainer-mode --prefix=/usr --disable-static
 	touch configure-stamp
 
 build: build-stamp

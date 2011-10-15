@@ -1,3 +1,9 @@
+libcompizconfig (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- kumattau <kumattau@gmail.com>  Sun, 16 Oct 2011 03:52:49 +0900
+
 libcompizconfig (0.8.4-2) unstable; urgency=medium
 
   * Medium urgency to fix RC bug in testing.

@@ -28,7 +28,10 @@ AUTOFOO_DELETE:=Makefile.in aclocal.m4 backend/Makefile.in config/Makefile.in \
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	./autogen.sh --prefix=/usr --sysconfdir=/etc --disable-protobuf
+	autoreconf -v --install
+	glib-gettextize --copy --force
+	intltoolize --automake --copy --force
+	./configure --enable-debug=full --enable-maintainer-mode --prefix=/usr --sysconfdir=/etc --disable-protobuf
 	touch configure-stamp
 
 build: build-stamp

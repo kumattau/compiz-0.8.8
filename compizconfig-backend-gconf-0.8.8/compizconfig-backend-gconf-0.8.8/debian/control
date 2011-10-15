@@ -2,7 +2,7 @@ Source: compizconfig-backend-gconf
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Sean Finney <seanius@debian.org>
-Build-Depends: debhelper (>= 5), autoconf, automake1.9, autotools-dev, compiz-dev (>= 0.8.4), intltool, libcompizconfig-dev (>= 0.8.4), libglib2.0-dev, libgconf2-dev, libtool, pkg-config, xsltproc
+Build-Depends: debhelper (>= 5), autoconf, automake1.9, autotools-dev, compiz-dev (>= 0.8.8), intltool, libcompizconfig-dev (>= 0.8.8), libglib2.0-dev, libgconf2-dev, libtool, pkg-config, xsltproc
 Standards-Version: 3.8.1
 Section: x11
 Vcs-Git: git://git.debian.org/git/pkg-xorg/bling/compizconfig-backend-gconf.git

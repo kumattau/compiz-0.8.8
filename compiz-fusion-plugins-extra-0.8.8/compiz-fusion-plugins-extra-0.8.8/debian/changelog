@@ -1,3 +1,9 @@
+compiz-fusion-plugins-extra (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- kumattau <kumattau@gmail.com>  Sun, 16 Oct 2011 03:53:24 +0900
+
 compiz-fusion-plugins-extra (0.8.4-2) unstable; urgency=low
 
   * Add Vcs-* fields.

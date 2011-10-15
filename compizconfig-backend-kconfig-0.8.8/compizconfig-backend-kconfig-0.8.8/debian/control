@@ -4,7 +4,7 @@ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Sean Finney <seanius@debian.org>
 Build-Depends: debhelper (>= 5), chrpath, 
  cmake,
- compiz-dev (>= 0.8.4), intltool, kdebase-workspace-dev, libcompizconfig-dev (>= 0.8.4), libtool, pkg-config, 
+ compiz-dev (>= 0.8.8), intltool, kdebase-workspace-dev, libcompizconfig-dev (>= 0.8.8), libtool, pkg-config, 
  quilt, 
  xsltproc
 Standards-Version: 3.8.1
