@@ -1,0 +1,6 @@
+usr/share/locale/*/LC_MESSAGES/*.mo
+usr/share/compiz/*.xml
+usr/share/compiz/*.png
+usr/share/compiz/*.svg
+usr/lib/compiz/*.so
+usr/include/compiz/compiz-elements.h

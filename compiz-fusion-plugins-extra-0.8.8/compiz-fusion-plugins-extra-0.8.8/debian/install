@@ -1,0 +1,4 @@
+usr/share/locale/*/LC_MESSAGES/*.mo
+usr/share/compiz/*.xml
+usr/share/compiz/*.png
+usr/lib/compiz/*.so

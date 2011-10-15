@@ -1,0 +1,2 @@
+usr/lib/compizconfig/backends/*.so
+usr/share/lintian/overrides/compizconfig-backend-kconfig

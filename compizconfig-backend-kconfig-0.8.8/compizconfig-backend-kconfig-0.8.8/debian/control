@@ -1,0 +1,24 @@
+Source: compizconfig-backend-kconfig
+Priority: extra
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Uploaders: Sean Finney <seanius@debian.org>
+Build-Depends: debhelper (>= 5), chrpath, 
+ cmake,
+ compiz-dev (>= 0.8.4), intltool, kdebase-workspace-dev, libcompizconfig-dev (>= 0.8.4), libtool, pkg-config, 
+ quilt, 
+ xsltproc
+Standards-Version: 3.8.1
+Section: x11
+
+Package: compizconfig-backend-kconfig
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Compiz Fusion configuration system - kconfig backend
+ Compiz Fusion is the result of the re-unification of the Beryl-project
+ and the community around the Compiz Window Manager. It seeks to provide
+ an easy and fun-to-use windowing environment, allowing use of the
+ graphics hardware to provide impressive effects, amazing speed and
+ unrivalled usefulness
+ .
+ This package provides the kconfig-based (kde) configuration backend for the 
+ compiz-fusion plugin system
