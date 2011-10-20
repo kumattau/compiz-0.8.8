@@ -1,14 +1,14 @@
 Source: compizconfig-backend-kconfig
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: Sean Finney <seanius@debian.org>
-Build-Depends: debhelper (>= 5), chrpath, 
- cmake,
- compiz-dev (>= 0.8.8), intltool, kdebase-workspace-dev, libcompizconfig-dev (>= 0.8.8), libtool, pkg-config, 
- quilt, 
- xsltproc
-Standards-Version: 3.8.1
+Uploaders: Sean Finney <seanius@debian.org>, kumattau <kumattau@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), chrpath, cmake, compiz-dev (>= 0.8.8),
+ intltool, kdebase-workspace-dev, libcompizconfig-dev (>= 0.8.8),
+ libtool, pkg-config, xsltproc
+Standards-Version: 3.9.2
 Section: x11
+Vcs-Git: git://anongit.compiz.org/compiz/compizconfig/compizconfig-backend-kconfig4
+Vcs-Browser: http://cgit.compiz.org/compiz/compizconfig/compizconfig-backend-kconfig4/tree
 
 Package: compizconfig-backend-kconfig
 Architecture: any

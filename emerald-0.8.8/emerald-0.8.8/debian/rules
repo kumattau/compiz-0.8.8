@@ -1,35 +1,15 @@
 #!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
+%:
+	dh $@
 
-DEB_CONFIGURE_EXTRA_FLAGS := 			\
-	--disable-static			\
-	--disable-mime-update
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-static --disable-mime-update
 
-DEB_INSTALL_DIRS_emerald =			\
-	/usr/bin 				\
-	/usr/share
-
-DEB_INSTALL_DIRS_libemeraldengine0 = 		\
-	/usr/lib/				\
-	/usr/lib/emerald/engines	
-
-DEB_INSTALL_DIRS_libemeraldengine-dev =		\
-	/usr/include				\
-	/usr/lib/pkgconfig
-
-
-install/emerald::
-	cp -ar debian/tmp/usr/bin/* debian/emerald/usr/bin/
-	cp -ar debian/tmp/usr/share/* debian/emerald/usr/share/
-
-install/libemeraldengine0::
-	cp -ar debian/tmp/usr/lib/libemeraldengine.so.* debian/libemeraldengine0/usr/lib/
-	cp -ar debian/tmp/usr/lib/emerald/engines/*.so debian/libemeraldengine0/usr/lib/emerald/engines/
-
-install/libemeraldengine-dev::
-	cp -ar debian/tmp/usr/include/* debian/libemeraldengine-dev/usr/include/
-	cp -ar debian/tmp/usr/lib/pkgconfig/* debian/libemeraldengine-dev/usr/lib/pkgconfig/
-
-
+override_dh_install:
+	# remove unneed files
+	find $(CURDIR)/debian/tmp -name "*.la" -o -name "*.a" | xargs rm -f
+	
+	dh_install --fail-missing

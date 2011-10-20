@@ -15,5 +15,9 @@ License:
 
     GPL, see `/usr/share/common-licenses/GPL'
 
+Copyright:
+
+    Copyright (C) 2007 Sean Finney
+
 The Debian packaging is (C) 2007, sean finney <seanius@debian.org> and
 is licensed under the GPL, see `/usr/share/common-licenses/GPL'.

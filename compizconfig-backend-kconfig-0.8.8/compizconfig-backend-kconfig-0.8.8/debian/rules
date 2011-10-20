@@ -4,74 +4,12 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-include /usr/share/quilt/quilt.make
+%:
+	dh $@
 
-CFLAGS = -Wall -g
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O2
-endif
+override_dh_auto_install:
+	dh_auto_install --destdir=$(CURDIR)/debian/tmp
 
-DEST:=$(CURDIR)/debian/tmp
+override_dh_install:
+	dh_install --sourcedir=$(CURDIR)/debian/tmp --fail-missing
 
-builddir/CMakeCache.txt: $(QUILT_STAMPFN)
-	dh_testdir
-	mkdir -p builddir
-	cd builddir && cmake .. -DCMAKE_INSTALL_PREFIX=/usr \
-	  -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)" \
-	  -DCMAKE_SHARED_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
-	  -DCMAKE_MODULE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
-	  -DCMAKE_EXE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed"
-
-build: build-stamp
-build-stamp: builddir/CMakeCache.txt
-	dh_testdir
-	cd builddir && $(MAKE)
-	touch $@
-
-clean: unpatch
-	dh_testdir
-	dh_testroot
-	rm -rf build-stamp builddir
-	dh_clean 
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_clean -k 
-	dh_installdirs
-	cd builddir && $(MAKE) DESTDIR=$(DEST) install
-	# copy in needed lintian overrides
-	mkdir -p $(DEST)/usr/share/lintian/overrides
-	cp debian/lintian-overrides \
-	   $(DEST)/usr/share/lintian/overrides/compizconfig-backend-kconfig
-
-# Build architecture-independent files here.
-binary-indep: build install
-# We have nothing to do by default.
-
-# Build architecture-dependent files here.
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-#	uncomment when upstream starts putting stuff in it
-#	dh_installchangelogs ChangeLog
-	dh_installchangelogs
-	dh_installdocs
-	dh_installexamples
-	dh_install --sourcedir=debian/tmp --fail-missing
-	dh_installman
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_makeshlibs
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure

@@ -3,3 +3,91 @@ emerald (0.8.8-1) unstable; urgency=low
   * New upstream release 
 
  -- kumattau <kumattau@gmail.com>  Sat, 15 Oct 2011 13:35:03 +0900
+
+emerald (0.7.2-0ubuntu6) maverick; urgency=low
+
+  * debian/patches/05_build_without_gtk_disable_deprecated.patch:
+    Build also without GDK_DISABLE_DEPRECATED.
+
+ -- Michael Bienia <geser@ubuntu.com>  Tue, 28 Sep 2010 14:47:43 +0200
+
+
+emerald (0.7.2-0ubuntu5) maverick; urgency=low
+
+  * Fixing FTBFS
+    + debian/control: 
+      - removed libglitz-dev from b-d
+
+ -- Stephan Hermann <sh@sourcecode.de>  Mon, 27 Sep 2010 10:43:17 +0000
+
+emerald (0.7.2-0ubuntu4) lucid; urgency=low
+
+  * Build without GTK_DISABLE_DEPRECATED being defined to fix FTBFS. 
+
+ -- Michael Bienia <geser@ubuntu.com>  Sat, 24 Apr 2010 15:45:01 +0200
+
+emerald (0.7.2-0ubuntu3) lucid; urgency=low
+
+  * 03_oldgtk.patch: replace deprecated GTK_OBJECT_TYPE_NAME() with 
+    G_OBJECT_TYPE_NAME() to fix FTBFS.
+  * Bump Standards-Version to 3.8.4.
+  * debian/control: fix typo in Vcs-Browser field.
+  * Add ${misc:Depends} to Depends.
+  * 04_manpage.patch: fix manpage errors.
+  * Add "set -e" to maintainer scripts.
+
+ -- Ilya Barygin <barygin@gmail.com>  Thu, 18 Feb 2010 23:21:43 +0300
+
+emerald (0.7.2-0ubuntu2) hardy; urgency=low
+
+  * debian/patches/01_upstream_pixmap-crashes-window-switcher.patch: patch
+    from upstream to workaround unrefd pixmap and extend pixmap sanity checks
+    to honor ref_count (LP: #139877)
+
+ -- Kjell Braden <fnord@pentabarf.de>  Sat, 15 Mar 2008 12:06:21 +0100
+
+emerald (0.7.2-0ubuntu1) hardy; urgency=low
+
+  * new upstream release
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 07 Mar 2008 15:57:50 +0100
+
+emerald (0.5.2+git20080205-0ubuntu2) hardy; urgency=low
+
+  * tighten build-depends to fix FTBFS
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 05 Feb 2008 11:26:35 +0100
+
+emerald (0.5.2+git20080205-0ubuntu1) hardy; urgency=low
+
+  * new git snpashot required for the new decoration atom
+    name changes
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 05 Feb 2008 09:48:36 +0100
+
+emerald (0.5.2-0ubuntu1) hardy; urgency=low
+
+  * New upstream release.
+  * debian/control:
+     - Modify Maintainer value to match the DebianMaintainerField
+       specification.
+     - Bump standards to version 3.7.3.
+     - Add Vcs-Bzr and Vcs-Browse tags.
+  * Formatting changes to debian/copyright.
+  * Add patches/improve_desktop_file.patch:
+     - Update .desktop file to the current FD.o standards
+     - Add Catalan, German (thanks to Ralph Janke) and Spanish translations.
+
+ -- Siegfried-Angel Gevatter Pujals (RainCT) <rainct@ubuntu.com>  Sat, 02 Feb 2008 14:01:59 +0100
+
+emerald (0.3~git20070717-0ubuntu1) gutsy; urgency=low
+
+  * new git snapshot, moved packaging to bzr
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 17 Jul 2007 10:10:12 +0100
+
+emerald (0.2.1-0ubuntu1) feisty; urgency=low
+
+  * Initial debianisation for Ubuntu based on ubuntu.beryl-project.org
+
+ -- Nicholas Thomas <lupine@beryl-project.org>  Sat, 17 Mar 2007 21:20:46 +0000

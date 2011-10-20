@@ -1,12 +1,17 @@
 Source: compiz-fusion-plugins-unsupported
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: Sean Finney <seanius@debian.org>
-Build-Depends: automake1.9, autotools-dev, compiz-dev (>= 0.8.8), compiz-fusion-bcop (>= 0.8.8), compiz-fusion-plugins-main (>= 0.8.8), debhelper (>= 5), intltool, libgconf2-dev, libglib2.0-dev, libtool, libxml2-dev, libxslt1-dev, pkg-config, xsltproc, librsvg2-dev, libcairo2-dev, libsm-dev, libglu1-mesa-dev, libdbus-1-dev, libdecoration0-dev, libxml-parser-perl, x11proto-core-dev, libxrender-dev, quilt
-Standards-Version: 3.7.2
+Uploaders: Sean Finney <seanius@debian.org>, kumattau <kumattau@gmail.com>
+Build-Depends: automake1.9, autotools-dev, compiz-dev (>= 0.8.8),
+ compiz-fusion-bcop (>= 0.8.8), compiz-fusion-plugins-main (>= 0.8.8),
+ debhelper (>= 7.0.50~), intltool, libgconf2-dev, libglib2.0-dev, libtool,
+ libxml2-dev, libxslt1-dev, pkg-config, xsltproc, librsvg2-dev, libcairo2-dev,
+ libsm-dev, libglu1-mesa-dev, libdbus-1-dev, libdecoration0-dev,
+ libxml-parser-perl, x11proto-core-dev, libxrender-dev, quilt
+Standards-Version: 3.9.2
 Section: x11
-Vcs-Git: git://git.debian.org/git/pkg-xorg/bling/compiz-fusion-plugins-unsupported.git
-Vcs-Browser: http://git.debian.org/?p=pkg-xorg/bling/compiz-fusion-plugins-unsupported.git
+Vcs-Git: git://anongit.compiz.org/compiz/plugins-unsupported
+Vcs-Browser: http://cgit.compiz.org/compiz/plugins-unsupported/tree
 
 Package: compiz-fusion-plugins-unsupported
 Architecture: any

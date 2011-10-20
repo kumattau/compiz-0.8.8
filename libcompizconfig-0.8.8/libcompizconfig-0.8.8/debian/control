@@ -1,18 +1,20 @@
 Source: libcompizconfig
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: Sean Finney <seanius@debian.org>
-Build-Depends: debhelper (>= 5), autoconf, automake1.9, autotools-dev, compiz-dev (>= 0.8.8-1), intltool, libtool, libglib2.0-dev, 
- libxml2-dev, libxslt1-dev,
-Standards-Version: 3.8.1
+Uploaders: Sean Finney <seanius@debian.org>, kumattau <kumattau@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), autoconf, automake1.9, autotools-dev,
+ compiz-dev (>= 0.8.8), intltool, libtool, libglib2.0-dev, libxml2-dev,
+ libxslt1-dev,
+Standards-Version: 3.9.2
 Section: libs
-Vcs-Git: git://git.debian.org/git/pkg-xorg/bling/libcompizconfig.git
-Vcs-Browser: http://git.debian.org/?p=pkg-xorg/bling/libcompizconfig.git
+Vcs-Git: git://anongit.compiz.org/compiz/compizconfig/libcompizconfig
+Vcs-Browser: http://git.compiz.org/compiz/compizconfig/libcompizconfig/tree
+
 
 Package: libcompizconfig-dev
 Section: libdevel
 Architecture: any
-Depends: libcompizconfig0 (= ${binary:Version})
+Depends: libcompizconfig0 (= ${binary:Version}), ${misc:Depends}
 Description: Configuration settings library for compiz-fusion - development files
  Compiz Fusion is the result of the re-unification of the Beryl-project
  and the community around the Compiz Window Manager. It seeks to provide

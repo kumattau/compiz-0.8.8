@@ -2,12 +2,16 @@ Source: compiz-fusion-bcop
 Section: x11
 Priority: extra
 Maintainer: Sean Finney <seanius@debian.org>
-Build-Depends: autoconf, automake1.9, debhelper (>= 5), intltool, libglib2.0-dev, libxslt1-dev, pkg-config
-Standards-Version: 3.8.1
+Uploaders: kumattau <kumattau@gmail.com>
+Build-Depends: autoconf, automake1.9, debhelper (>= 7.0.50~), intltool,
+ libglib2.0-dev, libxslt1-dev, pkg-config
+Standards-Version: 3.9.2
+Vcs-Git: git://anongit.compiz.org/fusion/libraries/bcop
+Vcs-Browser: http://cgit.compiz.org/fusion/libraries/bcop/tree
 
 Package: compiz-fusion-bcop
 Architecture: all
-Depends: pkg-config, xsltproc
+Depends: pkg-config, xsltproc, ${misc:Depends}
 Description: Compiz Fusion option code generator
  Compiz Fusion is the result of the re-unification of the Beryl-project
  and the community around the Compiz Window Manager. It seeks to provide
