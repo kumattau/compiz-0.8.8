@@ -28,9 +28,7 @@ override_dh_install:
 	
 	# the gconf and kconfig plugins are seperately installed into
 	# the -gnome and -kde packages respectively
-	rm -f $(CURDIR)/debian/tmp/usr/lib/compiz/libkconfig.so
 	rm -f $(CURDIR)/debian/compiz-plugins/usr/lib/compiz/libkconfig.so
-	rm -f $(CURDIR)/debian/tmp/usr/lib/compiz/libgconf.so
 	rm -f $(CURDIR)/debian/compiz-plugins/usr/lib/compiz/libgconf.so
 
 override_dh_makeshlibs:
